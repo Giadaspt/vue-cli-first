@@ -2,21 +2,33 @@
   <header>
       <h2>E tu come le preferisci le uova?</h2>
     <ul>
-      <li> <a href="#"> Sode </a> </li>
-      <li> <a href="#"> Alla coque </a> </li>
-      <li> <a href="#"> In camicia </a> </li>
-      <li> <a href="#"> Strapazzate </a> </li>
+      <li> <a href="#"> {{eggs[0].uova}} </a> </li>
+      <li> <a href="#"> {{eggs[1].uova}} </a> </li>
+      <li> <a href="#"> {{eggs[2].uova}} </a> </li>
+      <li> <a href="#"> {{eggs[3].uova}} </a> </li>
     </ul>
   </header>
 </template>
 
 <script>
 export default {
-  name: "Header"
+  name: "Header",
+
+  data() {
+    return  {
+      eggs: [
+        {uova: "Sode"},
+        {uova: "Alla coque"}, 
+        {uova: "in camicia"},
+        {uova: "Strapazzate"},
+      ]
+    }
+  }
+
 }
 </script>
 
-<style>
+<style scoped>
   header {
     display: flex;
     align-items: center;
@@ -24,7 +36,6 @@ export default {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: white;
     background-color: #265372;
-    border-bottom: #a57c48;
   }
 
   ul li {
