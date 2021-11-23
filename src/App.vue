@@ -3,7 +3,7 @@
     <Title/>
     <Header/>
     <Hero/>
-
+    <Footer/>
   </div>
 </template>
 
@@ -11,6 +11,7 @@
 import Title from './components/Title.vue'
 import Header from './components/Header.vue'
 import Hero from './components/Hero.vue'
+import Footer from './components/Footer.vue'
 
 
 export default {
@@ -18,7 +19,8 @@ export default {
   components: {
     Title,
     Header,
-    Hero
+    Hero,
+    Footer
   }
 }
 </script>
@@ -26,10 +28,8 @@ export default {
 <style >
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: darkorange;
+    text-align: center;
   }
 
-  h1 {
-    text-align: center;
-    color: darkgreen;
-  }
 </style>
